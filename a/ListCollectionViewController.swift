@@ -48,7 +48,10 @@ class ListCollectionViewController: UICollectionViewController {
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! CollectionViewCell
-    
+            cell.awakeFromNib()
+        
+        //ラベルに代入！
+        cell.className.text = array2["String"]
 
     
         return cell
